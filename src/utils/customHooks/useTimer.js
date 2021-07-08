@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import {
-    setMinutes, setSeconds, setRemainingMinutes, setRemainingSeconds,
-    decrementSeconds, decrementMinutes, decrementBreakMinutes, decrementBreakSeconds, setIsStarted, setIsBreak, setBreakMinutes,
-    setRemainingBreakMinutes, setBreakSeconds, setRemainingBreakSeconds
+    setRemainingMinutes, setRemainingSeconds,
+    decrementSeconds, decrementMinutes, decrementBreakMinutes, decrementBreakSeconds, setIsStarted, setIsBreak,
+    setRemainingBreakMinutes, setRemainingBreakSeconds
 } from "redux/ducks/timer";
 
 const useTimer = () => {
-    const { seconds, minutes, breakSeconds, breakMinutes, remainingMinutes, remainingBreakMinutes, remainingBreakSeconds, remainingSeconds, isStarted, isBreak } = useSelector(state => state.timer);
+    const { seconds, minutes, breakSeconds, breakMinutes,
+        remainingMinutes, remainingBreakMinutes, remainingBreakSeconds,
+        remainingSeconds, isStarted, isBreak } = useSelector(state => state.timer);
 
     const dispatch = useDispatch();
 

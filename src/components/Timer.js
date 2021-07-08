@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import {
     setMinutes, setSeconds, setRemainingMinutes, setRemainingSeconds,
     setIsStarted, setBreakMinutes,
     setRemainingBreakMinutes, setBreakSeconds, setRemainingBreakSeconds
 } from "redux/ducks/timer";
+
 import useTimer from "utils/customHooks/useTimer";
 import TimerClock from 'components/TimerClock';
 import styles from 'styles/timer.module.scss';
